@@ -8,7 +8,9 @@ new Promise((resolve) =>{
 }).then((arr)=>{
     return new Promise(resolve=>{
   		setTimeout(()=>{
-  				resolve(arr.filter(a => a%2==0));
+			const evenNumbers = arr.filter(a => a%2==0);
+    		document.getElementById('output').innerHTML= evenNumbers.join(",");
+  			resolve(evenNumbers);
   		},1000);
   		
   	});
